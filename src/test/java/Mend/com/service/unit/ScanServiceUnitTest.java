@@ -87,7 +87,7 @@ class ScanServiceTest {
 
     @Test
     void testGetScansCountByStatus() {
-        when(scanRepository.countByStatus(ScanStatus.PENDING)).thenReturn(10);
+        when(scanRepository.countByStatus(ScanStatus.PENDING)).thenReturn(10L);
 
         long count = scanService.getScansCountByStatus(ScanStatus.PENDING);
 
