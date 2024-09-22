@@ -1,8 +1,6 @@
 package Mend.service;
 
-import Mend.com.MendApplication;
 import Mend.converter.ScanMapper;
-import Mend.dto.CommitScanInfoDTO;
 import Mend.dto.ScanDTO;
 import Mend.dto.ScanResponseDTO;
 import Mend.repository.ScanRepository;
@@ -14,7 +12,6 @@ import org.slf4j.LoggerFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
@@ -42,7 +39,7 @@ public class ScanService {
 
     private static final Logger logger = LoggerFactory.getLogger(ScanService.class);
 
-    @Async
+
     public ScanResponseDTO processScan(ScanDTO scanDTO) {
         Scan scan = createNewScan(scanDTO);
 

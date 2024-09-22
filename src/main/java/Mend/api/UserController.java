@@ -35,5 +35,10 @@ public class UserController {
         List<UserActivityDTO> topUsers = userService.getTopActiveUsers(limit);
         return ResponseEntity.ok(topUsers);
     }
+
+    @GetMapping("/aaa")
+    public ResponseEntity<String> aaa() {
+        return ResponseEntity.ok("bbb");
+    }
 }
 

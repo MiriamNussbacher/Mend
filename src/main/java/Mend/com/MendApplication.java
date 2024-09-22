@@ -22,7 +22,7 @@ public class MendApplication {
 	private static final Logger logger = LoggerFactory.getLogger(MendApplication.class);
 
 	public static void main(String[] args) {
-		logger.info("app is up!");
+		logger.info("app is up!!!!!!!");
 
 		SpringApplication.run(MendApplication.class, args);
 	}
